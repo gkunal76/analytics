@@ -70,5 +70,21 @@ t(m1)
 
 sweep(m1, MARGIN = 1, STATS = c(2,3,4,5), FUN = "+")
 addmargins(m1, c(1,2), mean)
-
-
+(rollno = 1:30)
+(sname = paste("student", 1:30, sep = ""))
+(gender= sample(c('M', 'F'), size = 30, replace= T))
+table(gender)
+(gender= sample(c('M', 'F'), size = 30, replace= T, prob = c(.7,.3)))
+(marks1 = floor(rnorm(30, mean = 50, sd = 10)))
+(marks2 = ceiling(rnorm(30,40,5)))
+(course =sample(c('BBA', 'MBA'), size = 30, replace = T, prob = c(.5,.5)))
+rollno; gender; 
+marks1; marks2; course   
+df1 = data.frame(rollno,sname,gender, marks1, marks2, course,stringsAsFactors = F)
+df1
+summary(df1)
+df1$gender
+df1[1:10,]
+df1
+df1[marks >20|gender ='F', ]
+(gradesFactorOrdered = factor(grades))
